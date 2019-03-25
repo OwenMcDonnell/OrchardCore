@@ -6,6 +6,7 @@ branches:
   only:
     - master
     - dev
+    - *-ci
 
 # Do not build if there are only documentation changes
 skip_commits:
