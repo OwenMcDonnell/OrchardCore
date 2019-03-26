@@ -114,5 +114,8 @@ after_test:
     cd $env:APPVEYOR_BUILD_FOLDER\src\OrchardCore.Cms.Web
     Get-ChildItem -path ".\App_Data\" | Remove-Item -Recurse -Confirm:$false -Force
     dotnet publish -c Release  --no-build -o $env:APPVEYOR_BUILD_FOLDER\.build\release
+    cd $env:APPVEYOR_BUILD_FOLDER\.build\release
+    ls
     cd $env:APPVEYOR_BUILD_FOLDER
+    
     docker build -t orchardproject/orchardcore-cms-windows:dev .
