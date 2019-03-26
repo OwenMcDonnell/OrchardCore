@@ -1,1 +1,1 @@
-npm test --detectOpenHandles
+npm test
